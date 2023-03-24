@@ -229,6 +229,8 @@
 			<li><a class="" href="/tilt-five-godot/images/ExampleScenes.png"  class="external-link">ExampleScenes</a></li>
 			<li><a class="" href="/tilt-five-godot/images/GodotAutoload.png"  class="external-link">GodotAutoload</a></li>
 			<li><a class="" href="/tilt-five-godot/images/GodotImport.png"  class="external-link">GodotImport</a></li>
+			<li><a class="" href="/tilt-five-godot/images/T5-manager-signals.jpg"  class="external-link">T5-manager-signals</a></li>
+			<li><a class="" href="/tilt-five-godot/images/godot-t5-scene.jpg"  class="external-link">godot-t5-scene</a></li>
 		</ul>
 	</div>
 	<ul class="dir-list">
@@ -245,19 +247,22 @@
                                 <div class="toc">
 <ul>
 <li><a href="#platforms" class="anchor-link">Platforms</a></li>
-<li><a href="#installing" class="anchor-link">Installing</a></li>
+<li><a href="#installing-from-release" class="anchor-link">Installing From release</a></li>
 <li><a href="#using-the-extension" class="anchor-link">Using the extension</a></li>
 </ul>
 </div>
+<p><a href="[patrickdown/TiltFiveGodot: A Godot ARVRInterface for the Tilt Five AR glasses (github.com)](https://github.com/patrickdown/TiltFiveGodot)" class="external-link">Github</a>   </p>
 <p>TiltFiveGodot is <strong>GDNative</strong> extension for the Godot engine to connect to the <a href="https://www.tiltfive.com/" class="external-link">Tilt Five</a> system. It implements Godot's <strong>ARVRinterface</strong> and has GDNative class called TiltFiveManager for scripts to connect glasses and handle connection events.   </p>
 <h2 id="platforms">Platforms</h2>
 <p>Currently only Windows 10/11 is supported because that is the only platform supported by Tilt Five. T5 linux support is supposed to come at some point in the future and support for that platform will revisited when it becomes available.   </p>
-<h2 id="installing">Installing</h2>
-<p>You can <code>unzip</code> the <code>tilt-five.zip</code> to your root project folder or use Godot's import button in the AssetLib tab.   </p>
+<h2 id="installing-from-release">Installing From release</h2>
+<p>Download the latest <a href="https://github.com/patrickdown/TiltFiveGodot/releases" class="external-link">release</a> <br />
+You can <code>unzip</code> the  download to your root project folder or use Godot's import button in the AssetLib tab.   </p>
 <p><img alt="" src="/tilt-five-godot/images/GodotImport.png" />   </p>
 <h2 id="using-the-extension">Using the extension</h2>
-<p>The scene <code>addons\tilt-five\scenes\t5-scene</code> is an example of system initialization and wand input.   </p>
-<p>For any scene you can instance <code>\tilt-five\scenes\T5Manager</code> into it. And the following initialization code and connect the signals.   </p>
+<p>There is an example scene <code>addons\tilt-five\scenes\t5-scene.tscn</code>.  It shows how to initialize the glasses and get wand input.   </p>
+<p>In general for any scene you can instance <code>\tilt-five\scenes\T5Manager</code> into it, connect the signals and add the following initialization code.   </p>
+<p><img alt="" src="/tilt-five-godot/images/T5-manager-signals.jpg" />   </p>
 <div class="lang-gdscript">
 
 <div class="codehilite"><pre><span></span><code><span class="k">extends</span><span class="w"> </span><span class="n">Spatial</span>
@@ -301,13 +306,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A281164913295384953488413804359350143228{level}" class="graph_div"></div>
+    <div id="A245638098492646969711138653267804259972{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B281164913295384953488413804359350143228{level}" level="{level}" note_temp_id="281164913295384953488413804359350143228" onclick="window.ObsHtmlGraph.run(this, '281164913295384953488413804359350143228', 'tilt five godot');">
+        <button class="graph_button graph_show_button" id="B245638098492646969711138653267804259972{level}" level="{level}" note_temp_id="245638098492646969711138653267804259972" onclick="window.ObsHtmlGraph.run(this, '245638098492646969711138653267804259972', 'tilt five godot');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C281164913295384953488413804359350143228{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C245638098492646969711138653267804259972{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
