@@ -1,0 +1,142 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Site]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Site</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 19 May 2024 22:00:43 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 19 May 2024 22:00:43 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Tilt Five Godot GDNative addon]]></title><description><![CDATA[ 
+ <br><br><a data-tooltip-position="top" aria-label="https://github.com/patrickdown/TiltFiveGodot" rel="noopener" class="external-link" href="https://github.com/patrickdown/TiltFiveGodot" target="_blank">Project Page</a><br>TiltFiveGodot is GDNative extension for the Godot engine to connect to the <a data-tooltip-position="top" aria-label="https://www.tiltfive.com/" rel="noopener" class="external-link" href="https://www.tiltfive.com/" target="_blank">Tilt Five</a> system. It implements Godot's ARVRinterface and has GDNative class called TiltFiveManager for scripts to connect glasses and handle connection events.<br><br>Currently only Windows 10/11 is supported because that is the only platform supported by Tilt Five. T5 linux support is supposed to come at some point in the future and support for that platform will revisited when it becomes available.<br><br>Download the latest <a data-tooltip-position="top" aria-label="https://github.com/patrickdown/TiltFiveGodot/releases" rel="noopener" class="external-link" href="https://github.com/patrickdown/TiltFiveGodot/releases" target="_blank">release</a><br>
+You can unzip the  download to your root project folder or use Godot's import button in the AssetLib tab.<br><img alt="GodotImport.png" src="\godot\images\godotimport.png"><br><br>There is an example scene addons\tilt-five\scenes\t5-scene.tscn.  It shows how to initialize the glasses and get wand input.<br>In general for any scene you can instance \tilt-five\scenes\T5Manager into it, connect the signals and add the following initialization code.<br><img alt="godot-t5-scene.jpg" src="\godot\images\godot-t5-scene.jpg"><br>
+<img alt="T5-manager-signals.jpg" src="\godot\images\t5-manager-signals.jpg"><br>extends Spatial
+
+func _ready():
+	# Starts looking for available 
+	# Tilt Five glasses to use
+	# It will signal glasses_available
+	# when they are found
+	if $T5Manager.start_service():
+		print("Service started")
+
+func _on_T5Manager_glasses_available():
+	# This will reserve the first pair of 
+	# glasses it can for use. It will signal
+	# glasses_reserved when done
+	$T5Manager.reserve_glasses()
+
+func _on_T5Manager_glasses_reserved(success):
+	# The result of calling reserve_glasses()
+	# If successful then the glasses may be 
+	# rendered to by setting the viewport
+	# arvr flag
+	if success:
+		get_viewport().arvr = true
+
+Copy]]></description><link>godot\tilt-five-godot-3.html</link><guid isPermaLink="false">Godot/Tilt Five Godot 3.md</guid><pubDate>Fri, 24 Mar 2023 15:59:34 GMT</pubDate><enclosure url="godot\images\godotimport.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="godot\images\godotimport.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Tilt Five GDExtension for Godot 4]]></title><description><![CDATA[ 
+ <br><br>TiltFiveGodot4 is&nbsp;GDExtension&nbsp;for the Godot 4 engine to connect to the&nbsp;<a data-tooltip-position="top" aria-label="https://www.tiltfive.com/" rel="noopener" class="external-link" href="https://www.tiltfive.com/" target="_blank">Tilt Five</a>&nbsp;system. It extends Godot's&nbsp;XRInterface&nbsp;and adds T5 Nodes to handle the creation of the XR rigs in the scene.<br>Github: <a data-tooltip-position="top" aria-label="https://github.com/GodotVR/TiltFiveGodot4" rel="noopener" class="external-link" href="https://github.com/GodotVR/TiltFiveGodot4" target="_blank">GodotVR/TiltFiveGodot4</a><br><br><br><br>
+<br><a data-tooltip-position="top" aria-label="https://docs.tiltfive.com/t5_release_notes_20jj.html" rel="noopener" class="external-link" href="https://docs.tiltfive.com/t5_release_notes_20jj.html" target="_blank">Tilt Five 1.4.1 drivers</a>
+<br><a data-tooltip-position="top" aria-label="https://godotengine.org/download/windows/" rel="noopener" class="external-link" href="https://godotengine.org/download/windows/" target="_blank">The Godot Engine 4.2</a>
+<br><br>
+<br>From this page  <a data-tooltip-position="top" aria-label="https://github.com/GodotVR/TiltFiveGodot4/releases/tag/1.1.0" rel="noopener" class="external-link" href="https://github.com/GodotVR/TiltFiveGodot4/releases/tag/1.1.0" target="_blank">Release Godot TiltFive 1.1.0</a> download either gdtiltfive_gdscript.zip or gdtiltfive_csharp.zipdepending on which scripting language you want to use.
+<br>Create a Godot project
+<br>In AssetLib tab select the Import... button.<br><br><img alt="Pasted image 20231201105940.png" src="\godot\images\pasted-image-20231201105940.png"><br>
+<br>Select the zip file you downloaded and press Open
+<br>Be sure to check Ignore asset root and then click the Install button.<br><br><img alt="ConfigureAssetBefireInstall.png" src="\godot\images\configureassetbefireinstall.png"><br>
+<br>It is recommended that you save and reopen the project now.
+<br>Go to the Project-&gt;Project Settings... menu option and enable the Tilt Five plugin. <br><br><img alt="godot-plugins-dialog.png" src="\godot\images\godot-plugins-dialog.png"><br>
+<br>Also in project setting dialog enable the XR-&gt;Shaders option. <br><br><img alt="XR-shaders-setting.png" src="\godot\images\xr-shaders-setting.png"><br>
+<br>It is recommended that you save and reopen the project at this point too.
+<br><br>
+<br>Create a new 3D scene.
+<br>Add a Light and Environment
+<br>Open the Create New Node dialog. Type T5 in the search field. Select T5Manager and click the Create button.<br><br><img alt="CreateNewNode.png" src="\godot\images\createnewnode.png"><br>
+<br>Next add a T5Gameboard node. 
+<br>Click on The T5Manager in the scene tree and look at it's property inspector. Set the  Start Location property to the T5Gameboard node you added.<br><br><img alt="t5manager-inspector.png" src="\godot\images\t5manager-inspector.png"><br>
+<br>Next click on The T5Gameboard in the scene tree and look at it's property inspector. Set the  Content Scale property to 10.<br><br><img alt="t5-gameboard-inspector.png" src="\godot\images\t5-gameboard-inspector.png"><br>
+<br>Finally add a MeshInstance3D and select the BoxMesh
+<br>Your scene tree should now look something like this.<br><img alt="t5-cube-scene.png" src="\godot\images\t5-cube-scene.png"><br>At this point you should be able to run the scene, put on your Tilt Five glasses and see the cube on the board.<br><br><br>The plugin will create and manage the connection between the Tilt Five hardware and one or more XR rigs it will create in your root scene. An XR rig is just a regular Godot scene with a specific layout of required nodes that map to parts of the Tilt Five hardware. Where and how each XR rig is created is controlled by a T5Manager node in the root scene.<br>The default XR rig T5XRRig is found in res://addons/tiltfive/scenes/ folder of your project. <br><img alt="T5-XR-rig-mapping.png" src="\godot\images\t5-xr-rig-mapping.png"><br>The XR rig has the following required layout of <br>
+<br>T5XRRig is a Godot SubViewport node at the root node of the hierarchy. This is the viewport that your world will be rendered to for the pair of glasses attached to this rig.
+<br>Origin is a T5Origin3D node that is a child of T5XRRig node. It maps the center of the Tilt Five gameboard to a location in world coordinates.
+<br>Camera is a T5Camera3D node that is a child of the T5Origin3D node. It will track the location of the users head relative to the origin.
+<br>Wand_1 is a T5Controller3D node that is also a child of the T5Origin3D node. It will track the location of the Tilt Five wand relative to the origin.
+<br>It's very likely that you will eventually want attach things like colliders, raycasters or custom scripts to the XR rig nodes for your particular Tilt Five application. You can do this by inheriting from T5XRRig.tcsn to get all the required nodes in the correct layout.<br><img alt="t5-glasses-inherited-scene.png" src="\godot\images\t5-glasses-inherited-scene.png"><br><br>The main scene should have a T5Manager node. It is a basic manager that will create one XR rig for each pair of Tilt Five glasses that is connected to the computer. T5Manager has a couple of properties to customize it's behavior. <br><img alt="t5manager-inspector.png" src="\godot\images\t5manager-inspector.png"><br>
+<br>Glasses Scene can be set to a custom XR rig to be used in place of the default T5XRRig. 
+<br>Start Location can be set to a T5Gameboard node in the scene. The manager will use this to set the initial location and content scaling of the T5Origin3D in the XR rig it creates. If this field is blank the manager will set the 'T5Origin3D' to the world origin.
+<br><br>The T5Gameboard node is useful for visualizing the size of 3D content on the physical gameboard. <br><img alt="T5Gameboard.png" src="\godot\images\t5gameboard.png"><br>
+<img alt="t5-gameboard-inspector.png" src="\godot\images\t5-gameboard-inspector.png"><br>The gameboard has several properties.<br>
+<br>Content Scale - The active area of an Tilt Five LE game board is 0.7m X 0.7m. Content scale maps this area into Godot units. A content scale of 1 means that Godot units match the physical units of the gameboard so it would map to a 0.7m X 0.7m area in Godot world coordinates. Setting content scale to 10 would map a 7m X 7m area.
+<br>Gameboard Type - This sets the type of gameboard visualized in the scene. 
+<br>Show at Runtime - By default when the application is run the gameboard visualization will be hidden. However, when the application is setup to mirror the scene to the main display it might be desirable to visualize the gameboard in this view.
+<br>Layers - In support of Show at Runtime this can be set to change the layers the gameboard is rendered to.
+<br>When the T5Gameboard node is linked in the T5Manager the manager will use the location and content scale of the gameboard to set up the T5Origin3D node of the XR rig. This can be useful for setting player start locations.<br>
+<br>
+<br>
+<a data-tooltip-position="top" aria-label="https://github.com/patrickdown/TiltFiveGodot4/releases/tag/1.1.0-Linux-test" rel="noopener" class="external-link" href="https://github.com/patrickdown/TiltFiveGodot4/releases/tag/1.1.0-Linux-test" target="_blank">Alpha version available</a>
+<a href="\#fnref-1-1a4ede02e9db7d48" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a>
+
+<br>
+Builds but JNI integration needs work
+<a href="\#fnref-2-1a4ede02e9db7d48" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a>
+
+]]></description><link>godot\tilt-five-godot-4.html</link><guid isPermaLink="false">Godot/Tilt Five Godot 4.md</guid><pubDate>Fri, 01 Dec 2023 18:26:51 GMT</pubDate><enclosure url="godot\images\pasted-image-20231201105940.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="godot\images\pasted-image-20231201105940.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Using the Tangible Tracking Camera]]></title><description><![CDATA[ 
+ <br>The Tilt Five glasses have a IR camera that can be used for image recognition tasks. This could be used to recognize physical game pieces like cards or figures.<br>This camera can be accessed by adding a T5ImageCapture node to the T5XRRig as a child of the T5Origin node.  You will need to create a custom version of T5XRRig and set it as the default rig in the T5Manager. See <a data-href="Tilt Five Godot 4" href="\godot\tilt-five-godot-4.html" class="internal-link" target="_self" rel="noopener">Tilt Five Godot 4</a> for more information about customizing the XRRig. Also the default projects from the <a data-tooltip-position="top" aria-label="https://github.com/patrickdown/TiltFiveGodot4" rel="noopener" class="external-link" href="https://github.com/patrickdown/TiltFiveGodot4" target="_blank">github page</a>have examples.<br>Here is a T5XRRig with the image capture setup.<br>
+<img alt="T5ImageCaptureScene.png" src="\godot\images\t5imagecapturescene.png"><br><br>
+<br>bool start_capture() Turns the camera on and begins capturing frames. Returns true if the camera was successfully enabled.
+<br>void stop_capture() Turns the camera off and stops capturing frames.
+<br>bool acquire_buffer() Returns true if there an image ready to be read. Note that if true is returned release_buffer() must be called when done reading the data.
+<br>void release_buffer() Call this when finished reading the image frame data. Failure to call this function will cause the system to run out of image buffers and stop receiving camera data.&nbsp;
+<br>Vector2i get_image_size() the height and width of the image in pixels.
+<br>PackedByteArray get_image_data() get the byte array containing the image data. The image is a 8 bit per pixel gray scale image. The size of the buffer should be height X width bytes. 
+<br>Transform3D get_camera_transform() This is the pose of the camera when the image was captured. The pose is relative to the T5Origin node. To obtain the pose in world coordinates use the global_transform of the T5ImageCapture node.
+<br><br>Here is example code using the API. Notice that it's using Image.FORMAT_R8 because the image is single channel.  <br>extends Node3D
+
+var image_capture: T5ImageCapture
+var is_capturing := false
+var image_size: Vector2i
+var camera_image: Image
+@onready var camera_view: TextureRect = $ScreenUI/CameraView
+
+# Grab the T5ImageCapture out of the xr rig
+func _on_t_5_manager_xr_rig_was_added(xr_rig: T5XRRig):
+	var new_image_capture = xr_rig.get_image_capture()
+	if not image_capture and new_image_capture:
+		image_capture = new_image_capture
+	
+func _on_t_5_manager_xr_rig_will_be_removed(xr_rig):
+	var old_image_capture = xr_rig.get_image_capture()
+	if image_capture and image_capture == old_image_capture:
+		if is_capturing:
+			image_capture.stop_capture()
+			is_capturing = false
+		camera_view.visible = false
+		image_capture = null
+
+# Toggle the camera on and off
+func _input(event):
+	if image_capture == null:
+		return
+	if not event.is_action_pressed("toggle_camera"):
+		return
+	if not is_capturing and image_capture.start_capture():
+		is_capturing = true
+		camera_view.visible = true
+	else:
+		image_capture.stop_capture()
+		is_capturing = false
+		camera_view.visible = false
+
+func _process(_delta):
+	if not is_capturing:
+		return
+	# Test to see if a image buffer is available
+	if image_capture.acquire_buffer():
+		# get the image data
+		var buffer := image_capture.get_image_data()
+		# Get the size
+		var new_size = image_capture.get_image_size()
+		# If is the first time or the size has changed
+		if camera_image == null or image_size != new_size:
+			image_size = new_size
+			camera_image = Image.create_from_data(image_size.x, image_size.y, false, Image.FORMAT_R8, buffer)
+			camera_view.texture = ImageTexture.create_from_image(camera_image)
+		else:
+			camera_image.set_data(image_size.x, image_size.y, false, Image.FORMAT_R8, buffer)
+			camera_view.texture.update(camera_image)
+		image_capture.release_buffer()
+
+Copy]]></description><link>godot\using-the-tangible-tracking-camera.html</link><guid isPermaLink="false">Godot/Using the Tangible Tracking Camera.md</guid><pubDate>Sun, 19 May 2024 21:17:20 GMT</pubDate><enclosure url="godot\images\t5imagecapturescene.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="godot\images\t5imagecapturescene.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Projects]]></title><description><![CDATA[ 
+ <br><br><a data-href="Tilt Five Godot 4" href="\godot\tilt-five-godot-4.html" class="internal-link" target="_self" rel="noopener">Tilt Five Godot 4</a> is GDExtention plugin for the Godot 4 engine to connect to the <a data-tooltip-position="top" aria-label="https://www.tiltfive.com/" rel="noopener" class="external-link" href="https://www.tiltfive.com/" target="_blank">Tilt Five</a> system.<br><br><a data-href="Tilt Five Godot 3" href="\godot\tilt-five-godot-3.html" class="internal-link" target="_self" rel="noopener">Tilt Five Godot 3</a> is GDNative plugin for the Godot 3 engine to connect to the <a data-tooltip-position="top" aria-label="https://www.tiltfive.com/" rel="noopener" class="external-link" href="https://www.tiltfive.com/" target="_blank">Tilt Five</a> system.<br><br><a data-tooltip-position="top" aria-label="https://patrickdown.github.io/articles/retroreflectivedisplay.html" rel="noopener" class="external-link" href="https://patrickdown.github.io/articles/retroreflectivedisplay.html" target="_blank">Hypothetical Retroreflective Display Layouts</a><br>
+<a data-tooltip-position="top" aria-label="https://patrickdown.github.io/articles/tablearsimulator.html" rel="noopener" class="external-link" href="https://patrickdown.github.io/articles/tablearsimulator.html" target="_blank">Table top AR simulator in VR for Unity</a>]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Fri, 01 Dec 2023 17:54:38 GMT</pubDate></item></channel></rss>

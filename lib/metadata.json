@@ -1,0 +1,327 @@
+{
+  "vaultName": "Site",
+  "lastExport": 1716156043648,
+  "pluginVersion": "1.8.01",
+  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title",
+  "useCustomHeadContent": false,
+  "useCustomFavicon": false,
+  "files": [
+    "Godot/Tilt Five Godot 3.md",
+    "Godot/Tilt Five Godot 4.md",
+    "Godot/Using the Tangible Tracking Camera.md",
+    "index.md",
+    "godot/images/godotimport.png",
+    "godot/images/godot-t5-scene.jpg",
+    "godot/images/t5-manager-signals.jpg",
+    "godot/images/pasted-image-20231201105940.png",
+    "godot/images/configureassetbefireinstall.png",
+    "godot/images/godot-plugins-dialog.png",
+    "godot/images/xr-shaders-setting.png",
+    "godot/images/createnewnode.png",
+    "godot/images/t5manager-inspector.png",
+    "godot/images/t5-gameboard-inspector.png",
+    "godot/images/t5-cube-scene.png",
+    "godot/images/t5-xr-rig-mapping.png",
+    "godot/images/t5-glasses-inherited-scene.png",
+    "godot/images/t5gameboard.png",
+    "godot/images/t5imagecapturescene.png",
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/874d8b8e340f75575caa.svg",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/media/favicon.png",
+    "lib/styles/obsidian.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/main-styles.css"
+  ],
+  "mainDependencies": [
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/874d8b8e340f75575caa.svg",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/media/favicon.png",
+    "lib/styles/obsidian.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/main-styles.css"
+  ],
+  "fileInfo": {
+    "Godot/Tilt Five Godot 3.md": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 1856,
+      "exportedPath": "godot/tilt-five-godot-3.html",
+      "dependencies": [
+        "godot/images/godotimport.png",
+        "godot/images/godot-t5-scene.jpg",
+        "godot/images/t5-manager-signals.jpg"
+      ]
+    },
+    "Godot/Tilt Five Godot 4.md": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 6101,
+      "exportedPath": "godot/tilt-five-godot-4.html",
+      "dependencies": [
+        "godot/images/pasted-image-20231201105940.png",
+        "godot/images/configureassetbefireinstall.png",
+        "godot/images/godot-plugins-dialog.png",
+        "godot/images/xr-shaders-setting.png",
+        "godot/images/createnewnode.png",
+        "godot/images/t5manager-inspector.png",
+        "godot/images/t5-gameboard-inspector.png",
+        "godot/images/t5-cube-scene.png",
+        "godot/images/t5-xr-rig-mapping.png",
+        "godot/images/t5-glasses-inherited-scene.png",
+        "godot/images/t5manager-inspector.png",
+        "godot/images/t5gameboard.png",
+        "godot/images/t5-gameboard-inspector.png"
+      ]
+    },
+    "index.md": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 528,
+      "exportedPath": "index.html",
+      "dependencies": []
+    },
+    "godot/images/godotimport.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 14029,
+      "exportedPath": "godot/images/godotimport.png",
+      "dependencies": []
+    },
+    "godot/images/godot-t5-scene.jpg": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 15379,
+      "exportedPath": "godot/images/godot-t5-scene.jpg",
+      "dependencies": []
+    },
+    "godot/images/t5-manager-signals.jpg": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 21005,
+      "exportedPath": "godot/images/t5-manager-signals.jpg",
+      "dependencies": []
+    },
+    "godot/images/pasted-image-20231201105940.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 4374,
+      "exportedPath": "godot/images/pasted-image-20231201105940.png",
+      "dependencies": []
+    },
+    "godot/images/configureassetbefireinstall.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 25491,
+      "exportedPath": "godot/images/configureassetbefireinstall.png",
+      "dependencies": []
+    },
+    "godot/images/godot-plugins-dialog.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 24763,
+      "exportedPath": "godot/images/godot-plugins-dialog.png",
+      "dependencies": []
+    },
+    "godot/images/xr-shaders-setting.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 39817,
+      "exportedPath": "godot/images/xr-shaders-setting.png",
+      "dependencies": []
+    },
+    "godot/images/createnewnode.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 49814,
+      "exportedPath": "godot/images/createnewnode.png",
+      "dependencies": []
+    },
+    "godot/images/t5manager-inspector.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 29670,
+      "exportedPath": "godot/images/t5manager-inspector.png",
+      "dependencies": []
+    },
+    "godot/images/t5-gameboard-inspector.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 24726,
+      "exportedPath": "godot/images/t5-gameboard-inspector.png",
+      "dependencies": []
+    },
+    "godot/images/t5-cube-scene.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 61690,
+      "exportedPath": "godot/images/t5-cube-scene.png",
+      "dependencies": []
+    },
+    "godot/images/t5-xr-rig-mapping.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 137330,
+      "exportedPath": "godot/images/t5-xr-rig-mapping.png",
+      "dependencies": []
+    },
+    "godot/images/t5-glasses-inherited-scene.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 65670,
+      "exportedPath": "godot/images/t5-glasses-inherited-scene.png",
+      "dependencies": []
+    },
+    "godot/images/t5gameboard.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 39602,
+      "exportedPath": "godot/images/t5gameboard.png",
+      "dependencies": []
+    },
+    "lib/fonts/94f2f163d4b698242fef.otf": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 66800,
+      "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
+      "dependencies": []
+    },
+    "lib/fonts/72505e6a122c6acd5471.woff2": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 104232,
+      "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/2d5198822ab091ce4305.woff2": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 104332,
+      "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 98868,
+      "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cb10ffd7684cd9836a05.woff2": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 106876,
+      "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/b5f0f109bc88052d4000.woff2": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 105804,
+      "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cbe0ae49c52c920fd563.woff2": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 106108,
+      "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/535a6cf662596b3bd6a6.woff2": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 111708,
+      "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/70cc7ff27245e82ad414.ttf": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 192740,
+      "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/454577c22304619db035.ttf": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 161376,
+      "exportedPath": "lib/fonts/454577c22304619db035.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/52ac8f3034507f1d9e53.ttf": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 191568,
+      "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/05b618077343fbbd92b7.ttf": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 155288,
+      "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 7876,
+      "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+      "dependencies": []
+    },
+    "lib/media/874d8b8e340f75575caa.svg": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 317,
+      "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
+      "dependencies": []
+    },
+    "lib/html/file-tree.html": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 2621,
+      "exportedPath": "lib/html/file-tree.html",
+      "dependencies": []
+    },
+    "lib/scripts/webpage.js": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 47290,
+      "exportedPath": "lib/scripts/webpage.js",
+      "dependencies": []
+    },
+    "lib/media/favicon.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 1105,
+      "exportedPath": "lib/media/favicon.png",
+      "dependencies": []
+    },
+    "lib/styles/obsidian.css": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 157786,
+      "exportedPath": "lib/styles/obsidian.css",
+      "dependencies": []
+    },
+    "lib/styles/global-variable-styles.css": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 253,
+      "exportedPath": "lib/styles/global-variable-styles.css",
+      "dependencies": []
+    },
+    "lib/styles/main-styles.css": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 23130,
+      "exportedPath": "lib/styles/main-styles.css",
+      "dependencies": []
+    },
+    "Godot/Using the Tangible Tracking Camera.md": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 3687,
+      "exportedPath": "godot/using-the-tangible-tracking-camera.html",
+      "dependencies": [
+        "godot/images/t5imagecapturescene.png"
+      ]
+    },
+    "godot/images/t5imagecapturescene.png": {
+      "modifiedTime": 1716156043648,
+      "sourceSize": 14712,
+      "exportedPath": "godot/images/t5imagecapturescene.png",
+      "dependencies": []
+    }
+  }
+}
